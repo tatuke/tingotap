@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/tingotap/__init__.py
+src/tingotap/config_gate.py
+src/tingotap/main.py
+src/tingotap/tap_assist.py
+src/tingotap.egg-info/PKG-INFO
+src/tingotap.egg-info/SOURCES.txt
+src/tingotap.egg-info/dependency_links.txt
+src/tingotap.egg-info/entry_points.txt
+src/tingotap.egg-info/requires.txt
+src/tingotap.egg-info/top_level.txt

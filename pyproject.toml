@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tingotap"
+version = "0.1.0"
+description = "A command-line assistant powered by configurable AI models."
+readme = "README.md"
+requires-python = ">=3.13"
+license = {text = "MIT"}
+authors = [
+  {name = "sacco", email = "xx@example.com"},
+]
+dependencies = [
+    "typer[all]>=0.9.0",      # For creating the CLI application (based on Click)
+    "rich>=13.0.0",           # For rich text and beautiful formatting in the terminal
+    # "python-aiconfig>=0.17.0",# For managing AI model configurations and prompts(deparcted)
+    "ollama>=0.1.8",          # Official Ollama Python client
+    "Litellm>=1.34.0"
+]
+
+[project.scripts]
+tingotap = "tingotap.main:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]

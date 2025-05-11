@@ -1,0 +1,62 @@
+{
+    "name": "Tingotap AI Config",
+    "description": "Configuration for various AI models for Tingotap, using LiteLLM.",
+    "schema_version": "latest",
+    "metadata": {
+      "models": {
+        "ollama_default": {
+          "litellm_model_name": "ollama/llama3",
+          "litellm_api_base": "http://localhost:11434",
+          "settings": {
+            "temperature": 0.7,
+            "max_tokens": 1000
+          }
+        },
+        "ollama_phi3": {
+          "litellm_model_name": "ollama/phi3",
+          "litellm_api_base": "http://localhost:11434",
+          "settings": {
+            "temperature": 0.5,
+            "num_ctx": 4096
+          }
+        },
+        "openai_gpt4o_mini": {
+          "litellm_model_name": "gpt-4o-mini",
+          "settings": {
+            "temperature": 0.7,
+            "max_tokens": 1500
+          }
+        },
+        "anthropic_claude3_haiku": {
+          "litellm_model_name": "claude-3-haiku-20240307",
+          "settings": {
+            "temperature": 0.8,
+            "max_tokens": 1200
+          }
+        },
+        "gemini_1_5_flash": {
+          "litellm_model_name": "gemini/gemini-1.5-flash-latest",
+          "settings": {
+              "temperature": 0.9
+          }
+        }
+      },
+      "default_model_profile": "ollama_default"
+    },
+    "prompts": [
+      {
+        "name": "general_query",
+        "input": "User query: {{query}}",
+        "metadata": {
+          "model_profile": "ollama_default"
+        }
+      },
+      {
+        "name": "creative_writing",
+        "input": "Write a creative piece based on: {{topic}}",
+        "metadata": {
+          "model_profile": "openai_gpt4o_mini"
+        }
+      }
+    ]
+}
