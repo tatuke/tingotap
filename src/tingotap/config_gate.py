@@ -50,6 +50,8 @@ def get_model_profile_settings(app_config: Dict[str, Any], profile_name: Optiona
         console.print(f"[bold red]Error: Model profile '{resolved_profile_name}' not found in config.metadata.models.[/bold red]")
         return None
 
+# get prompt template & extra prompt condition(maybe) join together
+
 def get_prompt_template(app_config: Dict[str, Any], prompt_name: str) -> Optional[Dict[str, Any]]:
     if not app_config or "prompts" not in app_config:
         return None
@@ -64,7 +66,7 @@ if __name__ == "__main__":
     current_config = load_app_config()
     if current_config:
         console.print(f"Successfully loaded config: {current_config.get('name')}")
-
+        # get default model profile key
         default_profile_key = current_config.get("metadata", {}).get("default_model_profile", "N/A")
         console.print(f"Default model profile key: {default_profile_key}")
 

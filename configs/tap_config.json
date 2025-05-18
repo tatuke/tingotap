@@ -36,6 +36,8 @@
         },
         "gemini_1_5_flash": {
           "litellm_model_name": "gemini/gemini-1.5-flash-latest",
+          "litellm_api_base": "https://gemini-api.google.com",
+          "litellm_api_key": "AIzaSyB61Y4PXqXJQr5nJ0e957_L4L4L4L4L4L",
           "settings": {
               "temperature": 0.9
           }

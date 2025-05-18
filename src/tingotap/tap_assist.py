@@ -84,7 +84,9 @@ async def get_ai_response(
         "model": litellm_model_name,
         "messages": messages,
     }
-
+    if "litellm_api_key" in model_profile:
+        litellm_params["api_key"] = model_profile["litellm_api_key"]
+        console.print(f"[cyan]Using API key: {model_profile['litellm_model_name']}[/cyan]")
     # Add api_base if present in profile (for Ollama or custom endpoints)
     if "litellm_api_base" in model_profile:
         litellm_params["api_base"] = model_profile["litellm_api_base"]

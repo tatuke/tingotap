@@ -1,0 +1,15 @@
+# write down the condition or specific some path that will help AI deal with the task more effectively
+# example:
+
+  # data_path_1 = "/data/mysql/mysql_daliy_backup/"
+  # data_path_2 = "/data/mysql/conf/"
+  # data_path_3 = "/data/postgres/postgres_daliy_backup/"
+  # data_path_4 = "/data/postgresql/config/"
+
+  # You can also use natural language to describe the condition
+  # like:
+    # mainly install components on /data/ directory
+    # mainly put some download files on /data/download/ directory
+    # ...
+# though use natural language, but you should also pay attention to the path and the format of the data and keep your description concise and clear.
+# so that you or other people can understand and maintain your description easily.
